@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Header from "./components/header/Header";
+import Search from "./components/search/Search";
 // import logo from './logo.svg';
 
 import './App.css';
@@ -40,7 +41,12 @@ const App = () => {
       <div className="body__container">
         <div className="nav">
           <Header />
-          <div className="nav-right"></div>
+          <div className="nav-right">
+            <Search
+              value={searchValue}
+              onChange={handleSearch}
+            />
+          </div>
         </div>
       </div>
     </div>
